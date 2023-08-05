@@ -1,13 +1,58 @@
-.container {
+.dashboard {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    height: 100vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+        "header header"
+        "nav main"
+        "footer footer";
 }
 
-.grid-item {
-    background-color: #ddd;
-    padding: 20px;
-    font-size: 30px;
+body {
+    background-color: #a7f3d0;
+}
+
+.header {
+    grid-area: header;
+    /* Add your styles here */
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: -20px; /* Higher on the page */
+    margin-right: 10px; /* More to the right */
+}
+
+
+.btn {
+    padding: 0.5rem 1rem;
     text-align: center;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.main {
+    grid-area: main;
+    /* Add your styles here */
+}
+
+.footer {
+    grid-area: footer;
+    /* Add your styles here */
 }
